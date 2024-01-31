@@ -10,8 +10,7 @@ option = st.selectbox(
     ('','Title', 'Release Year', 'Rating'))
 if option == 'Title':
     title = st.text_input('Movie title')
-    if title in df['title']:
-        pqdf = df.loc[df['title']]
+    pqdf = df[df['title'].str.contains(title, case=False, regex=True)]
 if option == 'Release Year':
     release_range = st.text_input('Release date range (start_date-end_date)',"1/31/24-1/31/24")
     start_date_str, end_date_str = release_range.split('-')
