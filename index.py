@@ -12,7 +12,7 @@ if option == 'Title':
     title = st.text_input('Movie title')
     pqdf = df[df['title'].str.contains(title, case=False, regex=True)]
 if option == 'Release Year':
-    release_range = st.text_input('Release date range (start_date-end_date)',"1/31/24-1/31/24")
+    release_range = st.text_input('Release date range (start_date-end_date)',"1/31/1700-1/31/24")
     start_date_str, end_date_str = release_range.split('-')
     start_date = pd.to_datetime(start_date_str, infer_datetime_format=True)
     end_date = pd.to_datetime(end_date_str, infer_datetime_format=True)
