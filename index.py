@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 import pandas as pd 
-df = pd.read_csv(r"G:\My Drive\Compter\Python PAIN\Movie database streamlit\10000 most popular movie.csv")
+df = pd.read_csv("10000 most popular movie.csv")
 pqdf = df
 pd.options.display.max_rows = 10000
 st.title("Top 10,000 Most Popular Movies")
